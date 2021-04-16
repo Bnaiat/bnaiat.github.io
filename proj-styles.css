@@ -1,0 +1,200 @@
+/*------------------ Drum-pad CSS ------------------*/
+#drum-machine {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    background-color: #323339;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px black;
+}
+#drum-display {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DFE2D2;
+    color: #323339;
+    border: 5px solid #6CBF84;
+    border-radius: 10px;
+    font-family: 'Cormorant Unicase', serif;
+}
+.drum-pad {
+    outline: none;
+    border: none;
+    background-color: #6CBF84;
+    color: #DFE2D2;
+    font-size: 4rem;
+    border-radius: 10px;
+    font-family: 'Cormorant Unicase', serif;
+}
+.drum-pad:hover {
+  background-color: #DFE2D2;
+  color: #F26968;
+}
+
+
+
+/*------------------ Calculator CSS ------------------*/
+#calc {
+    margin: auto;
+    width: 350px;
+    height: 500px;
+    background-color: #132040;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 15px 15px 15px black;
+  }
+#display-operator{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    border-bottom: none;
+}
+#display {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    border-top: none;
+    font-size: 2rem;
+}
+input {
+    color: white;
+    background-color: #132040;
+    border: 1px solid white;
+    border-bottom: none;
+    text-align: right;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-family: 'Playfair Display', serif;
+}
+#clearAll {
+    background-color: #456596;
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+#clear {
+    background-color: #456596;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#equals {
+    background-color: #FF5C6E;
+    font-weight: bold;
+    grid-column: 4/5;
+    grid-row: 7/8;
+}
+#decimal {
+    grid-column: 3/4;
+    grid-row: 7/8;
+}
+#zero {
+    grid-column: 1/3;
+    grid-row: 7/8;
+}
+#add {
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+#subtract {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+#multiply {
+    grid-column: 4/5;
+    grid-row: 5/6;
+}
+#divide {
+    grid-column: 4/5;
+    grid-row: 6/7;
+}
+.btns {
+    border: 1px solid white;
+    outline: none;
+    font-size: 1.7rem;
+    background-color: #132040;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+.ops {
+    background-color: #F7C729;
+    color: white;
+    font-weight: bold;
+}
+.btns:hover {
+    background-color: white;
+    color: #132040
+}
+
+
+
+
+/*------------------ Pomodoro CSS ------------------*/
+#clock{
+    width: 580px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: #287A6F;
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px #0A332D;
+}
+#session-decrement, #session-increment, #break-decrement, #break-increment{
+    display: inline;
+    cursor: pointer;
+    font-family: 'Titillium Web', sans-serif;
+}
+#session-length, #break-length {
+    margin-bottom: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+#session-label, #break-label{
+    margin: 0 15px;
+    font-family: 'Titillium Web', sans-serif;
+}
+#timeLeftId{
+    grid-column: 1/3;
+}
+#timer-label {
+    font-size: 2.2rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+#time-left{
+    font-size: 4rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+.buttons {
+    padding: 0 15px;
+    background-color: white;
+    color: #0A332D;
+    border: 1px solid white;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: bolder;
+    font-family: 'Titillium Web', sans-serif;
+}
+#reset, #start-stop{
+    padding: 0 55px;
+    background-color: white;
+    color: #0A332D;
+    border: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+.buttons:hover, #reset:hover, #start-stop:hover{
+    background-color: #E27D60;
+    color: white;
+}

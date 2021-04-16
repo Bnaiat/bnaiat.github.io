@@ -1,0 +1,305 @@
+@media screen and (max-width: 1250px){
+    .project-wrapper {
+        width: 95%;
+    }
+    #about-me {
+        width: 95%;
+    }
+    #clock{
+        width: 530px;
+        height: 300px;
+    }
+    #reset, #start-stop{
+        font-size: 1.5rem;
+    }
+    #session-length, #break-length {
+        margin-bottom: 5px;
+    }
+    #timer-label {
+        font-size: 2rem;
+    }
+    #time-left{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .project-wrapper {
+        width: 100%;
+    }
+    #about-me {
+        width: 100%;
+    }
+    #clock{
+        width: 500px;
+        height: 270px;
+    }
+}
+@media screen and (max-width: 1090px){
+    #clock{
+        width: 485px;
+        height: 255px;
+    }
+    #reset, #start-stop{
+        font-size: 1.5rem;
+    }
+    #session-length, #break-length {
+        margin-bottom: 5px;
+    }
+    #timer-label {
+        font-size: 2rem;
+    }
+    #time-left{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #drum-machine {
+        width: 350px;
+        height: 350px;
+    }
+    .drum-pad {
+        font-size: 3.5rem;
+    }
+    #calc{
+        width: 300px;
+        height: 450px;
+    }
+    .btns{
+        font-size: 1.3rem;
+    }
+    .project-title {
+        font-size: 2.2rem;
+    }
+    .project-description {
+        font-size: 1.1rem;
+    }
+    .project-view {
+        font-size: 1.2rem;
+    }
+    #clock{
+        width: 430px;
+        height: 250px;
+    }
+    #reset, #start-stop{
+        font-size: 1.5rem;
+    }
+    #session-length, #break-length {
+        margin-bottom: 5px;
+    }
+    #timer-label {
+        font-size: 2rem;
+    }
+    #time-left{
+        font-size: 3rem;
+    }
+    #about-me-text {
+        font-size: 1rem;
+    }
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .project-title {
+        font-size: 2rem;
+        margin-bottom: 2vh;
+    }
+    .project-description {
+        font-size: 1.2rem;
+        padding: 0 4vw;
+        margin-bottom: 4vh;
+    }
+    #clock{
+        width: 400px;
+        height: 250px;
+    }
+    #reset, #start-stop{
+        font-size: 1.4rem;
+    }
+    #timer-label {
+        font-size: 1.8rem;
+    }
+    #time-left{
+        font-size: 2.8rem;
+    }
+}
+@media screen and (max-width: 840px){
+    .project-wrapper {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 3fr 2fr;
+        grid-template-columns: 1fr;
+    }
+    #calc{
+        width: 260px;
+        height: 400px;
+    }
+    .project-visual{
+        grid-row: 1/2;
+    }
+    .project-title {
+        font-size: 2rem;
+        margin-bottom: 2vh;
+    }
+    .project-description {
+        font-size: 1.1rem;
+        padding: 0 10vw;
+        margin-bottom: 4vh;
+    }
+    #clock{
+        width: 600px;
+        height: 350px;
+    }
+    #reset, #start-stop{
+        font-size: 1.6rem;
+    }
+    #timer-label {
+        font-size: 2.5rem;
+    }
+    #time-left{
+        font-size: 3.5rem;
+    }
+    #about-me {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    #about-me-text {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        padding: 5vh 15vw;
+    }
+    hr {
+        display: none;
+    }
+}
+@media screen and (max-width: 660px){
+    #clock{
+        width: 500px;
+        height: 320px;
+    }
+    #reset, #start-stop{
+        font-size: 1.5rem;
+    }
+    #timer-label {
+        font-size: 2.2rem;
+    }
+    #time-left{
+        font-size: 3.2rem;
+    }
+    #about-me-text {
+        font-size: 1rem;
+        padding: 8vh 8vw;
+    }
+}
+@media screen and (max-width: 520px){
+    #clock{
+        width: 440px;
+        height: 300px;
+    }
+    #reset, #start-stop{
+        font-size: 1.3rem;
+    }
+    #timer-label {
+        font-size: 2rem;
+    }
+    .project-description{
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 450px){
+    #about-me {
+        grid-template-rows: 3fr 1fr;
+    }
+    #about-me-text {
+        padding: 0 10vw;
+        font-size: 0.9rem;
+    }
+    
+    #drum-machine {
+        width: 300px;
+        height: 300px;
+    }
+    .drum-pad {
+        font-size: 3rem;
+    }
+    #calc{
+        width: 200px;
+        height: 330px;
+    }
+    .btns{
+        font-size: 1rem;
+    }
+    .project-wrapper {
+        grid-template-rows: 1fr 1fr;
+    }
+    .project-title {
+        font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+    .project-description {
+        margin-bottom: 3vh;
+        text-align: justify;
+        padding: 0 8vw;
+    }
+    .project-view {
+        font-size: 1.2rem;
+    }
+    #clock{
+        width: 380px;
+        height: 250px;
+    }
+    #reset, #start-stop{
+        font-size: 1.3rem;
+    }
+    #session-length, #break-length {
+        margin-bottom: 5px;
+    }
+    #timer-label {
+        font-size: 1.8rem;
+    }
+    #time-left{
+        font-size: 2.8rem;
+    }
+}
+@media screen and (max-width: 400px){
+    #clock{
+        width: 330px;
+        height: 250px;
+    }
+    #reset, #start-stop{
+        font-size: 1.3rem;
+        padding: 0 35px;
+    }
+    #session-length, #break-length {
+        margin-bottom: 5px;
+    }
+    .buttons {
+        padding: 0 10px;
+    }
+    #timer-label {
+        font-size: 1.8rem;
+    }
+    #time-left{
+        font-size: 2.8rem;
+    }
+    #about-me {
+        overflow: scroll;
+    }
+    #main-title{
+        font-size: 6rem;
+    }
+    #scroll-text {
+        font-size: 0.9rem;
+    }
+}
+
+
