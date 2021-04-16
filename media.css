@@ -212,9 +212,11 @@
     .project-description{
         font-size: 1rem;
     }
+    #main-title {
+        text-align: center;
+        right: auto;
+    }
 }
-
-
 @media screen and (max-width: 450px){
     #about-me {
         grid-template-rows: 3fr 1fr;
@@ -293,9 +295,6 @@
     }
     #about-me {
         overflow: scroll;
-    }
-    #main-title{
-        font-size: 6rem;
     }
     #scroll-text {
         font-size: 0.9rem;

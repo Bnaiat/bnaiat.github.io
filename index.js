@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const ln = document.querySelector('.fa-linkedin');
   const icons = document.querySelectorAll('.contact');
 
-
   projects.forEach(function(item,index){
     item.addEventListener('inview', function(){
       switch(index){

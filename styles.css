@@ -13,9 +13,10 @@
     justify-content: center;
 }
 #main-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position: absolute;
-    top: 35vh;
+    right: 5vw;
+    text-align: right;
     color: #eee;
     opacity: 0;
     animation: titleIn 1s ease-in 5s forwards;
@@ -193,11 +194,9 @@ hr {
 @keyframes titleIn {
     0%{
         opacity: 0;
-        transform: translateY(-2vh);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
