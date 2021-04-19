@@ -170,6 +170,9 @@
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
     }
+    #about-wrap {
+        grid-row: 1/2;
+    }
     #about-me-text {
         font-size: 1.1rem;
         margin-bottom: 0;

@@ -141,7 +141,7 @@
     height: 100vh;
     background-color:#eee;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 3fr;
     justify-content: center;
     align-items: center;
 }
@@ -213,7 +213,7 @@ hr {
 .out-to-right {
     animation: content-out-to-right 1s forwards;
 }
-.in-from-top {
+.in-from-top-d0 {
     animation: content-in-from-top 1.2s forwards;
 }
 .in-from-top-d1 {

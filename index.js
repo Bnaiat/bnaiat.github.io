@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loop: false
   })
   
-  var menuButtons = document.querySelectorAll(".menu-button")
-  let element = document.querySelectorAll('.navigate');
+  const menuButtons = document.querySelectorAll(".menu-button")
+  const pages = document.querySelectorAll('.navigate');
+  const colors = ["color-white","color-drum","color-calc","color-clock", "color-black"]
 
   menuButtons.forEach(function (item, index){
     item.addEventListener("click", function(e){
@@ -14,40 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
 
-  element.forEach(function(item,index) {
+  pages.forEach(function(item,index) {
     item.addEventListener("inview", function(){
-      switch(index){
-        case 0:
-          menuButtons.forEach(function(item){
-            item.classList.remove("color-drum","color-calc","color-clock", "color-black")
-            item.classList.add("color-white")
-          })
-        break;
-        case 1:
-          menuButtons.forEach(function(item){
-            item.classList.remove("color-white","color-calc","color-clock", "color-black")
-            item.classList.add("color-drum")
-          })
-        break;
-        case 2:
-          menuButtons.forEach(function(item){
-            item.classList.remove("color-white","color-drum","color-clock", "color-black")
-            item.classList.add("color-calc")
-          })
-        break;
-        case 3:
-          menuButtons.forEach(function(item){
-            item.classList.remove("color-white","color-drum","color-calc", "color-black")
-            item.classList.add("color-clock")
-          })
-        break;
-        default:
-          menuButtons.forEach(function(item){
-            item.classList.remove("color-white")
-            item.classList.add("color-black")
-          })
-        break;
-      }
+      menuButtons.forEach(function(el){
+        for(let i=0; i<colors.length; i++){
+          el.classList.remove(colors[i])
+        }
+        el.classList.add(colors[index]);
+      })
       menuButtons[index].classList.add("active");
     })
     item.addEventListener("outview", function(){
@@ -55,78 +30,39 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   });
 
-
-  const projects = document.querySelectorAll('.animate');
-  const aboutDrum = document.querySelector('#drum-about');
-  const aboutCalc = document.querySelector('#calc-about');
-  const aboutClock = document.querySelector('#clock-about');
-  const aboutMe = document.querySelector('#about-me-text');
-  const mail = document.querySelector('.fa-envelope');
-  const git = document.querySelector('.fa-github');
-  const fb = document.querySelector('.fa-facebook');
-  const ln = document.querySelector('.fa-linkedin');
+  const projPages = document.querySelectorAll('.animate');
+  const content = document.querySelectorAll('.content-in');
   const icons = document.querySelectorAll('.contact');
 
-  projects.forEach(function(item,index){
-    item.addEventListener('inview', function(){
-      switch(index){
-        case 0:
-          aboutDrum.classList.remove('out-to-left');
-          aboutDrum.classList.add('in-from-left');
-        break;
-        case 1:
-          aboutCalc.classList.remove('out-to-right')
-          aboutCalc.classList.add('in-from-right');
-        break;
-        case 2:
-          aboutClock.classList.remove('out-to-left');
-          aboutClock.classList.add('in-from-left');
-        break;
-        case 3:
-          aboutMe.classList.remove('out-to-left');
-          aboutMe.classList.add('in-from-left');
-          mail.classList.add('in-from-top');
-          git.classList.add('in-from-top-d1');
-          fb.classList.add('in-from-top-d2');
-          ln.classList.add('in-from-top-d3');
-          icons.forEach(function(item){
-            item.classList.remove('out-to-right')
-          })
-        default: 
-        break;
+  projPages.forEach((element,index) => {
+    element.addEventListener('inview',function(){
+      content[index].classList.remove('out-to-left','out-to-right');
+      if(index%2==0){
+        content[index].classList.add('in-from-left')
+      }else{
+        content[index].classList.add('in-from-right')
+      }
+      if(element.id==="about-page"){
+        for(let i=0; i<icons.length; i++){
+          icons[i].classList.add('in-from-top-d' + i);
+        }
       }
     })
-    item.addEventListener('outview', function(){
-      switch(index){
-        case 0:
-          aboutDrum.classList.remove('in-from-left');
-          aboutDrum.classList.add('out-to-left');
-        break;
-        case 1:
-          aboutCalc.classList.remove('in-from-right');
-          aboutCalc.classList.add('out-to-right');
-        break;
-        case 2:
-          aboutClock.classList.remove('in-from-left');
-          aboutClock.classList.add('out-to-left');
-        break;
-        case 3:
-          aboutMe.classList.remove('in-from-left');
-          aboutMe.classList.add('out-to-left');
-          mail.classList.remove('in-from-top');
-          git.classList.remove('in-from-top-d1');
-          fb.classList.remove('in-from-top-d2');
-          ln.classList.remove('in-from-top-d3');
-          icons.forEach(function(item){
-            item.classList.add('out-to-right')
-          })
-        default: 
-        break;
+    element.addEventListener('outview', function(){
+      content[index].classList.remove('in-from-left','in-from-right');
+      if(index%2==0){
+        content[index].classList.add('out-to-left')
+      }else{
+        content[index].classList.add('out-to-right')
+      }
+      if(element.id==="about-page"){
+        for(let i=0; i<icons.length; i++){
+          icons[i].classList.remove('in-from-top-d' + i);
+        }
+        icons.forEach(item => {
+          item.classList.add('out-to-left')
+        })
       }
     })
-  })
-
-
+  });
 })
-
-console.log(window.innerWidth)
