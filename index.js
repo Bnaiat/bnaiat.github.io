@@ -17,16 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   pages.forEach(function(item,index) {
     item.addEventListener("inview", function(){
-      menuButtons.forEach(function(el){
-        for(let i=0; i<colors.length; i++){
-          el.classList.remove(colors[i])
+        if(index==0){
+          menuButtons.forEach(item => {
+            item.classList.remove(colors[colors.length-1]);
+            item.classList.add(colors[index]);
+          })
+        }else{
+          menuButtons.forEach(item => item.classList.add(colors[colors.length-1]))
         }
-        el.classList.add(colors[index]);
-      })
-      menuButtons[index].classList.add("active");
+      menuButtons[index].classList.remove(colors[colors.length-1])
+      menuButtons[index].classList.add("active", colors[index]);
     })
     item.addEventListener("outview", function(){
-      menuButtons[index].classList.remove("active");
+      menuButtons[index].classList.remove("active", colors[index]);
     })
   });
 
